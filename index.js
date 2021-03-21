@@ -35,10 +35,10 @@ activity();
 
 client.on("message", msg => {  
   if (msg.content == prefix + "ip"){
-      msg.channel.send("connect 188.40.16.78:30686");
+      msg.channel.send("```connect 188.40.16.78:30686```");
   }
 
-  if (msg.member.permissions.has("MANAGE_MESSAGES")){
+  if (msg.member.permissions.has("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
           let args = msg.content.split(" ");
 
@@ -64,6 +64,7 @@ client.on("message", msg => {
                   
               }
           }
+          msg.channel.send("Les messages ont été supprimées avec succès");
       }
   }
 })
