@@ -42,6 +42,10 @@ client.on("message", msg => {
     msg.channel.send(data.clients + "/" + data.maxclients);
 }
 
+
+if (msg.content == prefix + "test"){
+  msg.channel.send("```connect test```");
+}
   if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
           let args = msg.content.split(" ");
