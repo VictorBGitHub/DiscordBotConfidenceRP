@@ -55,6 +55,7 @@ client.on("message", msg => {
         }
       }
     }
+
     else if (msg.content.startsWith(prefix + "kick")){
       let mention = msg.mentions.members.first();
 
@@ -72,46 +73,7 @@ client.on("message", msg => {
         }
       }
     }
-    else if (msg.content.startsWith(prefix + "mute")){
-      let mention = msg.mentions.members.first();
 
-      if(mention == undefined){
-        msg.reply("Membre mal mentionné");
-      }
-      else {
-        mention.roles.add("823209330312347698");
-        msg.reply(mention.displayName + " Mute avec succès.");
-
-      }
-    }
-    else if(msg.content.startsWith(prefix + "unmute")){
-      let mention = msg.mentions.members.first();
-
-      if (mention == undefined){
-        msg.reply("Membre mal mentionné.");
-      }
-      else {
-        mention.roles.remove("823209330312347698");
-        msg.channel.send(mention.displayName + " Unmute avec succès");
-      }
-    }
-    else if(msg.content.startsWith(prefix + "tempmute")){
-      let mention = msg.mentions.members.first();
-
-      if(mention == undefined){
-        msg.reply("Membre mal mentionné");
-      }
-      else {
-        let args = msg.content.split(" ");
-
-        mention.roles.add("823209330312347698");
-        setTimeout(function() {
-          mention.roles.remove("823209330312347698");
-          msg.channel.send("<@" + mention.id + "> tu peux parler de nouveau ! ");
-        }, args[2] * 1000);
-        }
-      }
-    }
 
   if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
