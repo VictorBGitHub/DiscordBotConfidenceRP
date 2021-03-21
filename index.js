@@ -36,9 +36,34 @@ activity();
 client.on("message", msg => {  
   if (msg.content == prefix + "ip"){
       msg.channel.send("connect 188.40.16.78:30686");
-      return;
   }
 
+  if (msg.member.permissions.has("MANAGE_MESSAGES")){
+      if(msg.content.startsWith(prefix + "clear")){
+          let args = msg.content.split(" ");
 
-  
+          if(args[1] == undefined){
+              msg.reply("Nombre de messages non défini")
+
+            
+          }
+
+          else {
+              let number = parseInt(args[1]);
+
+              if(isNaN(number)){
+                  msg.reply("Nombre de messages non défini");
+
+              }
+              else {
+                  msg.channel.bulkDelete(number).then(msg => {
+                      console.log("Suppression de " +msg.size+ " messages réussi !");
+                  }).catch(err => {
+                    console.log("Erreur de clear : " + err);
+                  });
+                  
+              }
+          }
+      }
+  }
 })
