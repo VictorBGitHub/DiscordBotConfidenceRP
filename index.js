@@ -32,11 +32,15 @@ function activity() {
 activity();
 
 
-
 client.on("message", msg => {  
   if (msg.content == prefix + "ip"){
       msg.channel.send("```connect 188.40.16.78:30686```");
   }
+
+
+  if (msg.content == prefix + "status"){
+    msg.channel.send(data.clients + "/" + data.maxclients);
+}
 
   if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
@@ -68,3 +72,6 @@ client.on("message", msg => {
       }
   }
 })
+
+
+
