@@ -38,7 +38,7 @@ client.on("message", msg => {
       msg.channel.send("```connect 188.40.16.78:30686```");
   }
 
-  if (msg.member.permissions.has("ADMINISTRATOR")){
+  if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
           let args = msg.content.split(" ");
 
