@@ -76,6 +76,15 @@ client.on("message", msg => {
   }
 
   if (msg.member.hasPermission("ADMINISTRATOR")){
+    if(msg.content.startsWith(prefix + "boot")){
+      msg.channel.send("@everyone Le serveur vient de reboot");
+        }
+      }
+
+
+
+
+  if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
           let args = msg.content.split(" ");
 
