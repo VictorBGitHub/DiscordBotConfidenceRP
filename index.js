@@ -33,13 +33,19 @@ activity();
 
 
 
-client.on("message", msg => {
+client.on("message", msg => {  
   if (msg.content == prefix + "ip"){
       msg.channel.send("```connect 188.40.16.78:30686```");
   }
 
   if (msg.content == prefix + "stat"){
       msg.channel.send("en cours")
+  }
+
+  if (msg.cotent == prefix + "help"){
+    msg.channel.send
+    ("!ip")
+    ("!test1")
   }
   
 })
