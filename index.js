@@ -36,6 +36,7 @@ activity();
 client.on("message", msg => {  
   if (msg.content == prefix + "ip"){
       msg.channel.send("connect 188.40.16.78:30686");
+      return;
   }
 
 
