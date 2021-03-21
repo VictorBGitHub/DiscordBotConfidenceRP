@@ -39,7 +39,7 @@ client.on("message", msg => {
   }
 
 
-  if (msg.member.hasPermission("ADMINISTRATOR")){
+  if (msg.member.roles.cache.has('823173042947227648')){
     if (msg.content.startsWith(prefix == "boot")){
         msg.channel.send("Le serveur vient de reboot, le staff vous souhaite un bon jeu !")
         .then(msg => {
@@ -49,5 +49,4 @@ client.on("message", msg => {
     }
   }
 
-  
 })
