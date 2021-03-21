@@ -45,7 +45,7 @@ client.on("message", msg => {
   if (msg.cotent == prefix + "help"){
     msg.channel.send
     ("!ip")
-    ("!test1")
+    ("!test1");
   }
   
 })
