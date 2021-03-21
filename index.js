@@ -112,11 +112,6 @@ client.on("message", msg => {
         }
       }
     }
-}
-
-
-
-
 
   if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
