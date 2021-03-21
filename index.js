@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const prefix = "!";
+const prefix = ".";
 const client = new Discord.Client();
 const configs = require("./configs.json");
 const fivereborn = require('fivereborn-query');
