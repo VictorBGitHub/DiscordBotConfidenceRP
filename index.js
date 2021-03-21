@@ -72,8 +72,8 @@ client.on("message", msg => {
           msg.reply("Impossible de kick ce membre");
         }
       }
-    }
-
+    } 
+  }
 
   if (msg.member.hasPermission("ADMINISTRATOR")){
       if(msg.content.startsWith(prefix + "clear")){
