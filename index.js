@@ -35,6 +35,18 @@ activity();
 client.on("message", msg => {  
 
 
+  if(msg.content == prefix + "test"){
+    var embed = new Discord.MessageEmbed()
+    .setColor("#8A2BE2")
+    .setTitle("Confidence RP")
+    .setAuthor("Confidence RP, logo.png")
+    .setDescription("Description")
+    .setThumbnail("logo.png")
+    msg.channel.send(embed);
+
+  }
+
+
 
 
 
@@ -85,10 +97,6 @@ client.on("message", msg => {
       msg.channel.send("@everyone Le serveur vient de reboot");
         }
       }
-
-
-
-
 
 
 
