@@ -33,6 +33,21 @@ activity();
 
 
 client.on("message", msg => {  
+  if(msg.author.bot) return;
+
+  var embed = new Discord.MessageEmbed()
+      .setColor("#8A2BE2")
+      .setTitle("Confidence RP")
+      .setAuthor("Confidence RP, logo.png")
+      .setDescription("Description")
+      .setThumbnail("logo.png")
+  
+
+  msg.channel.send(embed);
+
+
+
+
   if (msg.content == prefix + "ip"){
       msg.channel.send("```connect confidenceroleplayv2.capriceserv.com:30686```");
   }
@@ -80,6 +95,9 @@ client.on("message", msg => {
       msg.channel.send("@everyone Le serveur vient de reboot");
         }
       }
+
+
+
 
 
 
