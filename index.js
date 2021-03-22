@@ -35,17 +35,6 @@ activity();
 client.on("message", msg => {  
 
 
-  if(msg.content == prefix + "test") return;
-    var embed = new Discord.MessageEmbed()
-        .setColor("#8A2BE2")
-        .setTitle("Confidence RP")
-        .setAuthor("Confidence RP, logo.png")
-        .setDescription("Description")
-        .setThumbnail("logo.png")
-  
-
-  msg.channel.send(embed);
-
 
 
 
