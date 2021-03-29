@@ -39,17 +39,7 @@ client.on("message", msg => {
       msg.channel.send("```connect confidenceroleplayv2.capriceserv.com:30686```");
   }
 
-  if(msg.content == prefix + "serv"){
-    msg.channel.send
-    .setColor('##8A2BE2')
-    .setTitle('CONFIDENCE RP')
-    .setDescription('Confidence RP vous souhaite un bon jeu')
-    .addFields(
-        {name: 'JOUEURS', value: "```" + data.clients + "```" + "/" + "```" + data.maxclients + "```"}
-    )
-    msg.channel.send(newEmbed)
-  
-}
+
 
   if(msg.member.hasPermission("ADMINISTRATOR")){
     if(msg.content.startsWith(prefix + "ban")){
