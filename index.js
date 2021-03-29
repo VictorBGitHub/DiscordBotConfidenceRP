@@ -47,7 +47,7 @@ client.on("message", msg => {
     .addFields(
         {name: 'JOUEURS', value: "```" + data.client + "```" + "/" + "```" + data.maxclients + "```"}
     )
-    message.channel.send(newEmbed)
+    msg.channel.send(newEmbed)
   
 }
 
