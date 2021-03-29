@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const configs = require("./configs.json");
 const fivereborn = require('fivereborn-query');
 client.config = configs;
+const newEmbed = new Discord.MessageEmbed()
 
 client.login(configs.token)
   .then(
@@ -38,6 +39,17 @@ client.on("message", msg => {
       msg.channel.send("```connect confidenceroleplayv2.capriceserv.com:30686```");
   }
 
+  if(msg.content == prefix + "serv"){
+    msg.channel.send
+    .setColor('##8A2BE2')
+    .setTitle('CONFIDENCE RP')
+    .setDescription('Confidence RP vous souhaite un bon jeu')
+    .addFields(
+        {name: 'JOUEURS', value: "```" + data.client + "```" + "/" + "```" + data.maxclients + "```"}
+    )
+    message.channel.send(newEmbed)
+  
+}
 
   if(msg.member.hasPermission("ADMINISTRATOR")){
     if(msg.content.startsWith(prefix + "ban")){
@@ -78,6 +90,7 @@ client.on("message", msg => {
 
   if (msg.member.hasPermission("ADMINISTRATOR")){
     if(msg.content.startsWith(prefix + "boot")){
+      msg.delete();
       msg.channel.send("@everyone Le serveur vient de reboot");
         }
       }
