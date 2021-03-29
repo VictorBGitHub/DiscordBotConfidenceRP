@@ -45,7 +45,7 @@ client.on("message", msg => {
     .setTitle('CONFIDENCE RP')
     .setDescription('Confidence RP vous souhaite un bon jeu')
     .addFields(
-        {name: 'JOUEURS', value: "```" + data.client + "```" + "/" + "```" + data.maxclients + "```"}
+        {name: 'JOUEURS', value: "```" + data.clients + "```" + "/" + "```" + data.maxclients + "```"}
     )
     msg.channel.send(newEmbed)
   
