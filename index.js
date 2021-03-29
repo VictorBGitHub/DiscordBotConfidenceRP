@@ -4,7 +4,6 @@ const client = new Discord.Client();
 const configs = require("./configs.json");
 const fivereborn = require('fivereborn-query');
 client.config = configs;
-const newEmbed = new Discord.MessageEmbed()
 
 client.login(configs.token)
   .then(
