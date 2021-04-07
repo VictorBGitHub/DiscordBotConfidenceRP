@@ -1,2 +1,0 @@
-# DiscordBotConfidenceRP
-Confidence Bot
